@@ -1,0 +1,37 @@
+dmWidgetSocialShareWidgets:
+  
+  addThis:
+    cache:              true
+    public_name:        AddThis widget
+    form_class:         dmAddThisForm
+    view_class:         dmAddThisView
+  facebookLikeButton:
+    cache:              true
+    public_name:        Facebook Like Button
+    form_class:         dmFacebookSocialPluginsLikeButtonForm
+    view_class:         dmFacebookSocialPluginsLikeButtonView
+  facebookSendButton:
+    cache:              true
+    public_name:        Facebook Send Button
+    form_class:         dmFacebookSocialPluginsSendButtonForm
+    view_class:         dmFacebookSocialPluginsSendButtonView
+  facebookComments:
+    cache:              true
+    public_name:        Facebook Comments
+    form_class:         dmFacebookSocialPluginsCommentsForm
+    view_class:         dmFacebookSocialPluginsCommentsView
+  facebookActivityFeed:
+    cache:              true
+    public_name:        Facebook Activity Feed
+    form_class:         dmFacebookSocialPluginsActivityFeedForm
+    view_class:         dmFacebookSocialPluginsActivityFeedView
+  facebookRecommendations:
+    cache:              true
+    public_name:        Facebook Recommendations
+    form_class:         dmFacebookSocialPluginsRecommendationsForm
+    view_class:         dmFacebookSocialPluginsRecommendationsView
+  facebookLikeBox:
+    cache:              true
+    public_name:        Facebook Like Box
+    form_class:         dmFacebookSocialPluginsLikeBoxForm
+    view_class:         dmFacebookSocialPluginsLikeBoxView
