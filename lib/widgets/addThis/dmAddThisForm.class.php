@@ -15,6 +15,21 @@ class dmAddThisForm extends dmWidgetPluginForm {
     public function configure() {
         parent::configure();
         $services = dmAddThisFetchServices::fetchServices();
+        // Services
+        $this->widgetSchema['services'] = new sfWidgetFormChosenSelect(
+                array(
+                    'choices'=>$services,
+                    'multiple'=>true,
+                    'expanded'=>false,
+                    'widget_width'=>'70%;'
+                )
+        );
+        $this->validatorSchema['services'] = new sfValidatorChoice(
+                array(
+                    'choices'=>  array_keys($services)
+                )
+        );
+
         // Style
         $this->widgetSchema['style'] = new sfWidgetFormChoice(array(
             'choices' => $this->getService('i18n')->translateArray($this->styles),
@@ -31,18 +46,7 @@ class dmAddThisForm extends dmWidgetPluginForm {
         }
 
         
-        $this->widgetSchema['services'] = new sfWidgetFormChoice(
-                array(
-                    'choices'=>$services,
-                    'multiple'=>true,
-                    'expanded'=>true
-                )
-        );
-        $this->validatorSchema['services'] = new sfValidatorChoice(
-                array(
-                    'choices'=>  array_keys($services)
-                )
-        );
+        
     }
     
 }
