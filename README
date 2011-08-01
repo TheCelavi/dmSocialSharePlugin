@@ -2,3 +2,4 @@ This is start of the Social Share plugin - development stage.
 
 It is intent to cover all popular social networks and widgets that are missing in DIEM.
 
+Depends on dmChosenSelectPlugin
