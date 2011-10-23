@@ -20,12 +20,9 @@ class dmAddThisForm extends dmWidgetPluginForm {
         parent::configure();
         $services = dmAddThisFetchServices::fetchServices();
         // Services
-        $this->widgetSchema['services'] = new sfWidgetFormChosenSelect(
+        $this->widgetSchema['services'] = new sfWidgetFormMultiselect(
                 array(
-                    'choices'=>$services,
-                    'multiple'=>true,
-                    'expanded'=>false,
-                    'widget_width'=>'70%;'
+                    'choices'=>$services
                 )
         );
         $this->validatorSchema['services'] = new sfValidatorChoice(
