@@ -25,13 +25,13 @@ class dmFacebookSocialPluginsRecommendationsForm extends dmWidgetPluginForm {
         
         // Domain
         $this->widgetSchema['domain'] = new sfWidgetFormInputText();
-        $this->validatorSchema['domain'] = new sfValidatorString( // TODO validate domain only!!!
+        $this->validatorSchema['domain'] = new sfValidatorUrl( // TODO validate domain only!!!
                 array(
                     'required'=> true                    
                 )
         );
         if (!$this->getDefault('domain')) {
-            $this->setDefault('domain', sfContext::getInstance()->getRequest()->getHost());
+            $this->setDefault('domain', 'http://'.sfContext::getInstance()->getRequest()->getHost());
         }
                 
         // Width
